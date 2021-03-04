@@ -1,3 +1,7 @@
+// Обяъвляем переменные
+// ========================
+$color:#1eacc7;
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -282,8 +286,85 @@ h6 {
     }
 }
 
+// mobiel
+// ===================
 .mobile {
     min-height: 864px;
     padding: 48px 0 79px 0;
     background: url(../img/bg/mobile_app.png) center (center / cover) no-repeat;
+
+    &_inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 13px 0 0 -67px;
+
+
+    }
+
+    &_item {
+        position: relative;
+        margin: 0 auto;
+        max-width: 320px;
+        width: 33.333%;
+
+        // justify-content: space-between;
+        height: 280px;
+        margin: 19px 0 0 85px;
+        text-align: center;
+        padding-top: 91px;
+
+
+        &_1 {
+            background: url(../img/bg/mobile_screen_1.jpg);
+        }
+
+        &_2 {
+            background: url(../img/bg/mobile_screen_2.jpg);
+        }
+
+        &_3 {
+            background: url(../img/bg/mobile_screen_3.jpg);
+        }
+
+        &_4 {
+            background: url(../img/bg/mobile_screen_4.jpg);
+        }
+
+        &_5 {
+            background: url(../img/bg/mobile_screen_5.jpg);
+        }
+
+        &_6 {
+            background: url(../img/bg/mobile_screen_6.jpg);
+        }
+
+
+        &_subtitle {
+            font-size: 24px;
+            line-height: 31px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        &_plus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0 auto;
+            width: 26px;
+            height: 26px;
+            background-color: #000000;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+
+    }
+
+
+
 }

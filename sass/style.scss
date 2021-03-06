@@ -1,6 +1,17 @@
 // Обяъвляем переменные
 // ========================
-$color:#1eacc7;
+$main-color: #1eacc7;
+$second-color: #ff5656;
+@mixin btn_hover{
+    &:hover {
+        background-image: none;
+        background-color: $main-color;
+
+    }
+}
+
+
+
 
 body {
     margin: 0;
@@ -134,7 +145,7 @@ h6 {
         height: 52px;
         box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
         border-radius: 4px;
-        background-image: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+        background-image: linear-gradient(0deg, $main-color 0%, #4ce2ff 100%);
         border: none;
         box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.11);
         box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.2);
@@ -142,6 +153,7 @@ h6 {
         font-weight: 400;
         text-transform: uppercase;
         color: #ffffff;
+        @include btn_hover;
     }
 }
 
@@ -190,7 +202,7 @@ h6 {
         width: 265px;
         height: 69px;
         box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
-        background-image: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+        background-image: linear-gradient(0deg, $main-color 0%, #4ce2ff 100%);
         box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.2);
         border: none;
         border-radius: 4px;
@@ -198,6 +210,7 @@ h6 {
         font-weight: 400;
         text-transform: uppercase;
         color: #ffffff;
+        @include btn_hover;
     }
 }
 
@@ -209,6 +222,7 @@ h6 {
 }
 
 .label {
+    position: relative;
     margin: 0 auto;
     padding-top: 7px;
     width: 112px;
@@ -219,9 +233,21 @@ h6 {
     text-transform: uppercase;
     color: #ffffff;
     text-align: center;
+    z-index: 2;
+
+    &_white {
+        background-color: #fff;
+        color: #000;
+    }
+
+    &_min {
+        width: 76px;
+    }
+
 }
 
 .title {
+    position: relative;
     margin-bottom: 0;
     margin-top: 38px;
     font-size: 38px;
@@ -229,15 +255,26 @@ h6 {
     text-transform: uppercase;
     color: #222222;
     text-align: center;
+    z-index: 2;
+
+    &_white {
+        color: #fff;
+    }
 }
 
 .subtitle {
+    position: relative;
     margin-bottom: 0;
     margin-top: 19px;
     font-size: 17px;
     font-weight: 400;
     color: #222222;
     text-align: center;
+    z-index: 2;
+
+    &_white {
+        color: #fff;
+    }
 }
 
 .reasons_item {
@@ -262,7 +299,7 @@ h6 {
         display: flex;
         width: 113px;
         height: 113px;
-        background-color: #1eacc7;
+        background-color: $main-color;
         border-radius: 50%;
         justify-content: center;
         align-items: center;
@@ -273,7 +310,7 @@ h6 {
             font-size: 17px;
             line-height: 21px;
             font-weight: 400;
-            color: #1eacc7;
+            color: $main-color;
         }
 
         .reasons_text {
@@ -296,23 +333,19 @@ h6 {
     &_inner {
         display: flex;
         flex-wrap: wrap;
-        margin: 13px 0 0 -67px;
-
-
+        margin: 13px 0 0 0;
+        justify-content: space-between;
     }
 
     &_item {
+
         position: relative;
         margin: 0 auto;
-        max-width: 320px;
-        width: 33.333%;
-
-        // justify-content: space-between;
+        width: 320px;
         height: 280px;
-        margin: 19px 0 0 85px;
+        margin: 19px 0 0 0;
         text-align: center;
         padding-top: 91px;
-
 
         &_1 {
             background: url(../img/bg/mobile_screen_1.jpg);
@@ -361,10 +394,81 @@ h6 {
             background-color: #000000;
             border-radius: 100%;
             cursor: pointer;
+
+            // &:before {
+            //     content: '';
+            //     display: block;
+            //     width: 14px;
+            //     height: 2px;
+            //     background-color: $main-color;
+            //     transition: 0.3s all;
+            // }
+
+            // &:after {
+            //     content: '';
+            //     position: absolute;
+            //     left: 50%;
+            //     transform: translateX(-50%);
+            //     display: block;
+            //     height: 14px;
+            //     width: 2px;
+            //     background-color: $main-color;
+            //     transition: 0.3s all;
+            // }
+
+            // &:hover {
+
+            //     &:before,
+            //     &:after {
+            //         background-color: $second-color;
+            //     }
+
+            // }
+
         }
 
     }
 
+    // &_item:first-child {
+    //     margin: 19px 0 0 0;
+    // }
+
+    // &_item:nth-child(4n) {
+    //     margin: 19px 0 0 0;
+    // }
+
+}
+
+.choice {
+    position: relative;
+    min-height: 895px;
+    padding: 57px 0 138px 0;
+    background: url('../img/bg/mobile_app.png') center (center / cover) no-repeat;
 
 
+    &_img {
+        position: relative;
+        display: block;
+        margin: 56px auto 0 auto;
+        z-index: 2;
+    }
+
+    &_descr {
+        text-align: center;
+        color: #222222;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+
+}
+
+.black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 499px;
+    width: 100%;
+    background-color: #070716;
+    z-index: 1;
 }

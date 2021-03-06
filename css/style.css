@@ -140,7 +140,12 @@ h6 {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #ffffff
+}
+
+.subheader_btn:hover {
+    background-image: none;
+    background-color: #1eacc7
 }
 
 .promo {
@@ -199,11 +204,17 @@ h6 {
     color: #ffffff
 }
 
+.promo_btn:hover {
+    background-image: none;
+    background-color: #1eacc7
+}
+
 .reasons {
     padding: 70px 0 65px 0
 }
 
 .label {
+    position: relative;
     margin: 0 auto;
     padding-top: 7px;
     width: 112px;
@@ -213,26 +224,48 @@ h6 {
     font-weight: 100;
     text-transform: uppercase;
     color: #ffffff;
-    text-align: center
+    text-align: center;
+    z-index: 2
+}
+
+.label_white {
+    background-color: #fff;
+    color: #000
+}
+
+.label_min {
+    width: 76px
 }
 
 .title {
+    position: relative;
     margin-bottom: 0;
     margin-top: 38px;
     font-size: 38px;
     font-weight: 700;
     text-transform: uppercase;
     color: #222222;
-    text-align: center
+    text-align: center;
+    z-index: 2
+}
+
+.title_white {
+    color: #fff
 }
 
 .subtitle {
+    position: relative;
     margin-bottom: 0;
     margin-top: 19px;
     font-size: 17px;
     font-weight: 400;
     color: #222222;
-    text-align: center
+    text-align: center;
+    z-index: 2
+}
+
+.subtitle_white {
+    color: #fff
 }
 
 .reasons_item {
@@ -308,16 +341,18 @@ h6 {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 13px 0 0 -67px
+    margin: 13px 0 0 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
 }
 
 .mobile_item {
     position: relative;
     margin: 0 auto;
-    max-width: 320px;
-    width: 33.333%;
+    width: 320px;
     height: 280px;
-    margin: 19px 0 0 85px;
+    margin: 19px 0 0 0;
     text-align: center;
     padding-top: 91px
 }
@@ -375,4 +410,131 @@ h6 {
     background-color: #000000;
     border-radius: 100%;
     cursor: pointer
+}
+
+.mobile_item_plus:before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: #1eacc7;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all
+}
+
+.mobile_item_plus:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: block;
+    height: 14px;
+    width: 2px;
+    background-color: #1eacc7;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all
+}
+
+.mobile_item_plus:hover:before,
+.mobile_item_plus:hover:after {
+    background-color: #ff5656
+}
+
+.choice {
+    position: relative;
+    min-height: 895px;
+    padding: 57px 0 138px 0;
+    background: url("../img/bg/mobile_app.png") center center/cover no-repeat
+}
+
+.choice_img {
+    position: relative;
+    display: block;
+    margin: 56px auto 0 auto;
+    z-index: 2
+}
+
+.choice_descr {
+    text-align: center;
+    color: #222222;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 24px
+}
+
+.black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 499px;
+    width: 100%;
+    background-color: #070716;
+    z-index: 1
+}
+
+.require {
+    padding: 68px 0 84px 0
+}
+
+.require_inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.require_item {
+    margin: 33px 0;
+    width: 480px
+}
+
+.require_item_nmb {
+    margin-bottom: 0px
+}
+
+.require_title {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1ca8c3
+}
+
+.require_list {
+    margin-top: 22px;
+    list-style-type: none;
+    padding-left: 50px
+}
+
+.require_list li {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 300;
+    color: #222222
+}
+
+.require_list li:before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 3px;
+    width: 21px;
+    height: 20px;
+    background: url(../icons/check_blue.svg) center center/cover no-repeat
+}
+
+.require_descr {
+    color: #1ca8c3
+}
+
+.require .warning .require_title {
+    color: #ff5656
+}
+
+.require .warning .require_list li:before {
+    background: url(../icons/check_red.svg) center center/cover no-repeat
 }

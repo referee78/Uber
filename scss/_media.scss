@@ -15,8 +15,8 @@
         }
     }
 
-    .reasons .reasons_block {
-        .reasons_descr {
+    .reasons {
+        &_descr {
             max-width: 300px;
         }
     }

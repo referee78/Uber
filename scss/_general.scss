@@ -19,6 +19,62 @@ a {
     text-decoration: none;
 }
 
+.label {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 7px;
+    width: 112px;
+    height: 24px;
+    background-color: #000000;
+    font-size: 11px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    z-index: 2;
+
+    &_white {
+        background-color: #fff;
+        color: #000;
+    }
+
+    &_min {
+        width: 76px;
+    }
+
+}
+
+.title {
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 38px;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+    text-align: center;
+    z-index: 2;
+
+    &_white {
+        color: #fff;
+    }
+}
+
+.subtitle {
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 19px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #222222;
+    text-align: center;
+    z-index: 2;
+
+    &_white {
+        color: #fff;
+    }
+}
+
 /* Container
   =================== */
 
@@ -58,7 +114,7 @@ a {
 
         &:last-child {
             padding: 0;
-            border-right:none;
+            border-right: none;
         }
     }
 
@@ -198,84 +254,32 @@ a {
 /* Reasons
   ============== */
 
+
 .reasons {
     padding: 70px 0 65px 0;
-}
 
-.label {
-    position: relative;
-    margin: 0 auto;
-    padding-top: 7px;
-    width: 112px;
-    height: 24px;
-    background-color: #000000;
-    font-size: 11px;
-    font-weight: 100;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-align: center;
-    z-index: 2;
 
-    &_white {
-        background-color: #fff;
-        color: #000;
+
+
+    &_item {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    &_min {
-        width: 76px;
+    &_block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
     }
 
-}
-
-.title {
-    position: relative;
-    margin-bottom: 0;
-    margin-top: 38px;
-    font-size: 38px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #222222;
-    text-align: center;
-    z-index: 2;
-
-    &_white {
-        color: #fff;
-    }
-}
-
-.subtitle {
-    position: relative;
-    margin-bottom: 0;
-    margin-top: 19px;
-    font-size: 17px;
-    font-weight: 400;
-    color: #222222;
-    text-align: center;
-    z-index: 2;
-
-    &_white {
-        color: #fff;
-    }
-}
-
-.reasons_item {
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.reasons .reasons_block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 35px;
-
-    .reasons_descr {
+    &_descr {
         max-width: 342px;
     }
 
-    .reasons_round {
+    &_round {
         margin-right: 26px;
         display: flex;
         width: 113px;
@@ -286,25 +290,25 @@ a {
         align-items: center;
     }
 
-    .reasons_descr {
-        .reasons_subtitle {
-            font-size: 17px;
-            line-height: 21px;
-            font-weight: 400;
-            color: $main-color;
-        }
-
-        .reasons_text {
-            text-align: justify;
-            line-height: 21px;
-            font-size: 15px;
-            font-weight: 300;
-            color: #202020;
-        }
+    &_subtitle {
+        font-size: 17px;
+        line-height: 21px;
+        font-weight: 400;
+        color: $main-color;
     }
+
+    &_text {
+        text-align: justify;
+        line-height: 21px;
+        font-size: 15px;
+        font-weight: 300;
+        color: #202020;
+    }
+
+
 }
 
-// mobiel
+// Mobiel
 // ===================
 .mobile {
     min-height: 864px;
